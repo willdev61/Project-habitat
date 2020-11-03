@@ -17,7 +17,10 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from pub import views
+
 urlpatterns = [
+    url(r'^$', views.home),
     url(r'^pub/', include('pub.urls')),
     url(r'^admin/', admin.site.urls),
 ]
