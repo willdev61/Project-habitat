@@ -20,7 +20,7 @@ from django.contrib import admin
 from pub import views
 
 urlpatterns = [
-    url(r'^$', views.home),
+    url(r'^$', views.index),
     url(r'^pub/', include('pub.urls')),
     url(r'^admin/', admin.site.urls),
 ]
