@@ -1,6 +1,7 @@
 from django.http import HttpResponse
+from django.template import loader
 
 # Create your views here.
 def index(request):
-	message = "Hello this is my first app"
-	return HttpResponse(message)
+	template = loader.get_template('pub/index.html')
+	return HttpResponse(template.render(request=request))
