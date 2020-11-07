@@ -4,3 +4,12 @@ body {
   background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
 }
+
+.navbar {
+	height: 100px;
+	text-transform: uppercase;
+}
+
+.navbar-brand {
+	margin-top: 25px;
+}
