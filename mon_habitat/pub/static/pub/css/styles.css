@@ -1,7 +1,7 @@
 body {
   font-size: 16px;
   color: #fff;
-  background-color: #61122f;
+  background-color: #FCFCFC;
   font-family: 'Oxygen', sans-serif;
 }
 /** HEADER **/
@@ -15,10 +15,6 @@ body {
 	margin-top: 25px;
 }
 
-.container-fluid {
-	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
-	padding-top: auto;
-	padding-bottom: auto;
+.jumbotron {
+	background-color: black;
 }
