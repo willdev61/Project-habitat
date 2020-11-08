@@ -4,7 +4,7 @@ body {
   background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
 }
-
+/** HEADER **/
 .navbar {
 	height: 100px;
 	text-transform: uppercase;
@@ -13,4 +13,12 @@ body {
 
 .navbar-brand {
 	margin-top: 25px;
+}
+
+.container-fluid {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: auto;
+	padding-bottom: auto;
 }
