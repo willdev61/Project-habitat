@@ -15,9 +15,7 @@ def public(request):
             form = PublicationForm(request.POST, request.FILES)
             if form.is_valid():
                 form.save()
-                messages.success(request, 'Your password was updated successfully!')
             return HttpResponse('Publication réussie')
         else:
             form = PublicationForm()
-        
         return render(request, 'pub/public.html', {'form':form})
