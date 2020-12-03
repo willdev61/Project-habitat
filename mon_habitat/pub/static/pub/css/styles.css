@@ -1,6 +1,6 @@
 body {
   font-size: 16px;
-  color: #fff;
+  color: rgb(10, 10, 10);
   background-color: #FCFCFC;
   font-family: 'Oxygen', sans-serif;
 }
@@ -17,11 +17,10 @@ body {
 
 /** JUMBOTRON **/
 .jumbotron {
-	background-color: #74C3CA;
+	background-color: #464c4d;
 }
 
 .text-center {
-	background-color: blue;
 	height: 150px;
 }
 .text-center h1 {
