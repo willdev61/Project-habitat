@@ -12,10 +12,12 @@ def index(request):
 def public(request):
         form = PublicationForm()
         if request.method == 'POST':
-            form = PublicationForm(request.POST, request.FILES)
+            form = PublicationForm(request.POST or None, request.FILES or None)
             if form.is_valid():
                 form.save()
+                messages.success(request, 'Your password was updated successfully!')
             return HttpResponse('Publication réussie')
         else:
             form = PublicationForm()
+        
         return render(request, 'pub/public.html', {'form':form})

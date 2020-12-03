@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.files.storage import FileSystemStorage
 
 CITIES_CHOICES = [
     ('ABOBO', 'Abobo'),
@@ -36,4 +37,4 @@ class Publication(models.Model):
     number_1 = models.CharField('Contact 1', max_length=200, unique=True)
     number_2 = models.CharField('Contact 2', max_length=200, unique=True, blank=True)
     description = models.TextField('Description', max_length=1000)
-    image_one = models.ImageField('Image', upload_to = 'img_upload')
+    image_one = models.ImageField('Image', upload_to = 'img_upload/')
