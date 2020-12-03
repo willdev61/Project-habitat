@@ -18,7 +18,7 @@
         </div>
         <div class="col-md-4 mb-3">
             {{ form.city.errors }}
-            <label for="{{ form.city.id_for_label }} "></label> {{ form.city|as_crispy_field }}
+            <label for="{{ form.city.id_for_label }} "></label> {{ form.cities|as_crispy_field }}
         </div>
         <div class="col-md-4 mb-3">
             {{ form.categories.errors }}
@@ -30,11 +30,11 @@
         </div>
         <div class="col-md-6 mb-3">
             {{ form.phone_number_1.errors }}
-            <label for="{{ form.phone_number_1.id_for_label }} "></label> {{ form.phone_number_1|as_crispy_field }}
+            <label for="{{ form.phone_number_1.id_for_label }} "></label> {{ form.number_1|as_crispy_field }}
         </div>
         <div class="col-md-6 mb-3">
             {{ form.phone_number_2.errors }}
-            <label for="{{ form.phone_number_2.id_for_label }} "></label> {{ form.phone_number_2|as_crispy_field }}
+            <label for="{{ form.phone_number_2.id_for_label }} "></label> {{ form.number_2|as_crispy_field }}
         </div>
         <div class="col-md-12 mb-3">
             {{ form.description.errors }}

@@ -1,7 +1,10 @@
-from django.conf.urls import url
+from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    #url(r'^$', views.home), 
+    path('', views.public, name='public'),
+    #path('listing/', views.listing, name='listing'),
+    #path('<int:publication_id>/', views.detail, name='detail'),
+    #path('search/', views.search, name='search'),
 ]
