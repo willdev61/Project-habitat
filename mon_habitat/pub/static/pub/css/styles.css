@@ -20,10 +20,15 @@ body {
 	background-color: #464c4d;
 }
 
+
 .text-center {
 	height: 150px;
 }
 .text-center h1 {
 	text-transform: uppercase;
 	font-family: 'Oxygen';
+}
+
+footer{
+	height: 50px;
 }
