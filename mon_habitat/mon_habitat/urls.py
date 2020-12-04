@@ -23,9 +23,9 @@ from pub import views
 
 urlpatterns = [
     url(r'^$', views.index),
-    url(r'^pub/', include('pub.urls')),
+    url(r'^pub/', include('pub.urls', namespace='pub')),
     url(r'^admin/', admin.site.urls),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
