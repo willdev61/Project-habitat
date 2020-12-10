@@ -37,4 +37,4 @@ class Publication(models.Model):
     number_1 = models.IntegerField('Contact 1', unique=True)
     number_2 = models.IntegerField('Contact 2', unique=True, blank=True)
     description = models.TextField('Description', max_length=1000)
-    image_one = models.ImageField('Image', upload_to = 'img_upload/')
+    image_one = models.FileField('Image', upload_to = 'img_upload/')
