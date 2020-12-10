@@ -1,60 +1,62 @@
 {% extends 'pub/base.html' %} {% load static %} {% load crispy_forms_tags %} {% load background_image_tags %}
 
 {% block content %}
-<body style="background: url('{% static 'pub/images/fa2.jpg' %}') no-repeat fixed; background-size: cover;"></body>
-<div class="container">
-    <div class="card">
-        <h5 class="card-header text-center">Publication</h5>
-        <div class="card-body">
-            <form method="POST" enctype="multipart/form-data" class="form-block" action="{% url 'pub:public' %}">
-                {% csrf_token %} {{ form.non_field_errors }}
-                <div class="form-row">
-                    <div class="col-md-4 mb-3">
-                        {{ form.first_name.errors }}
-                        <label for="{{ form.first_name.id_for_label }} "></label> {{ form.first_name|as_crispy_field }}
+<body style="background: url('{% static 'pub/images/fa2.jpg' %}') no-repeat fixed; background-size: cover;">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header text-center">Publication</h5>
+            <div class="card-body">
+                <form method="POST" enctype="multipart/form-data" class="form-block" action="{% url 'pub:public' %}">
+                    {% csrf_token %} {{ form.non_field_errors }}
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            {{ form.first_name.errors }}
+                            <label for="{{ form.first_name.id_for_label }} "></label> {{ form.first_name|as_crispy_field }}
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            {{ form.last_name.errors }}
+                            <label for="{{ form.last_name.id_for_label }} "></label> {{ form.last_name|as_crispy_field }}
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            {{ form.agency_name.errors }}
+                            <label for="{{ form.agency_name.id_for_label }} "></label> {{ form.agency_name|as_crispy_field }}
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            {{ form.city.errors }}
+                            <label for="{{ form.city.id_for_label }} "></label> {{ form.cities|as_crispy_field }}
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            {{ form.categories.errors }}
+                            <label for="{{ form.categories.id_for_label }} "></label> {{ form.categories|as_crispy_field }}
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            {{ form.status.errors }}
+                            <label for="{{ form.status.id_for_label }} "></label> {{ form.status|as_crispy_field }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.phone_number_1.errors }}
+                            <label for="{{ form.phone_number_1.id_for_label }} "></label> {{ form.number_1|as_crispy_field }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.phone_number_2.errors }}
+                            <label for="{{ form.phone_number_2.id_for_label }} "></label> {{ form.number_2|as_crispy_field }}
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            {{ form.description.errors }}
+                            <label for="{{ form.description.id_for_label }} "></label> {{ form.description|as_crispy_field }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.image_one.errors }}
+                            <label for="{{ form.image_one.id_for_label }} "></label> {{ form.image_one|as_crispy_field }}
+                        </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        {{ form.last_name.errors }}
-                        <label for="{{ form.last_name.id_for_label }} "></label> {{ form.last_name|as_crispy_field }}
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        {{ form.agency_name.errors }}
-                        <label for="{{ form.agency_name.id_for_label }} "></label> {{ form.agency_name|as_crispy_field }}
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        {{ form.city.errors }}
-                        <label for="{{ form.city.id_for_label }} "></label> {{ form.cities|as_crispy_field }}
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        {{ form.categories.errors }}
-                        <label for="{{ form.categories.id_for_label }} "></label> {{ form.categories|as_crispy_field }}
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        {{ form.status.errors }}
-                        <label for="{{ form.status.id_for_label }} "></label> {{ form.status|as_crispy_field }}
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        {{ form.phone_number_1.errors }}
-                        <label for="{{ form.phone_number_1.id_for_label }} "></label> {{ form.number_1|as_crispy_field }}
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        {{ form.phone_number_2.errors }}
-                        <label for="{{ form.phone_number_2.id_for_label }} "></label> {{ form.number_2|as_crispy_field }}
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        {{ form.description.errors }}
-                        <label for="{{ form.description.id_for_label }} "></label> {{ form.description|as_crispy_field }}
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        {{ form.image_one.errors }}
-                        <label for="{{ form.image_one.id_for_label }} "></label> {{ form.image_one|as_crispy_field }}
-                    </div>
-                </div>
-                <button type="submit " class="btn btn-outline-primary btn-lg btn-block">Publier</button>
-            </form>
-        </div>
-      </div>
-</div>
+                    <button type="submit " class="btn btn-outline-primary btn-lg btn-block">Publier</button>
+                </form>
+            </div>
+          </div>
+    </div>
+    
+</body>
 
 
 {% endblock%}

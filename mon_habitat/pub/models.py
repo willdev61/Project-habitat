@@ -35,6 +35,6 @@ class Publication(models.Model):
     categories = models.CharField('Catégories', max_length=200, choices=CATEGORIES_CHOICES)
     status = models.CharField('Statut', max_length=200, choices=STATUS_CHOICES)
     number_1 = models.IntegerField('Contact 1', unique=True)
-    number_2 = models.IntegerField('Contact 2', unique=True, blank=True)
+    number_2 = models.IntegerField('Contact 2', unique=True, null=True)
     description = models.TextField('Description', max_length=1000)
     image_one = models.FileField('Image', upload_to = 'img_upload/')
