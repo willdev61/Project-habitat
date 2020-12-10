@@ -6,7 +6,7 @@
     <div class="card">
         <h5 class="card-header text-center">Publication</h5>
         <div class="card-body">
-            <form method="POST" enctype="multipart/form-data " class="form-block " action="{% url 'pub:public' %}">
+            <form method="POST" enctype="multipart/form-data" class="form-block" action="{% url 'pub:public' %}">
                 {% csrf_token %} {{ form.non_field_errors }}
                 <div class="form-row">
                     <div class="col-md-4 mb-3">

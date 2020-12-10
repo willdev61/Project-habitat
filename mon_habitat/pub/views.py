@@ -8,12 +8,11 @@ def index(request):
 
 
 def public(request):
-        if request.method == "POST":
-            form = PublicationForm(request.POST, request.FILES)
-            if form.is_valid():
-                form.save()
-            return HttpResponse('Publication réussie')
-        else:
-            form = PublicationForm()
-        
-        return render(request, 'pub/public.html', {'form':form})
+    if request.method == "POST":
+        form = PublicationForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        return HttpResponse('Publication réussie')
+    else:
+        form = PublicationForm()
+    return render(request, 'pub/public.html', {'form':form})
