@@ -27,3 +27,20 @@ def listing(request):
         'publications' : publications
     }
     return render(request, 'pub/listing.html', context)
+
+
+def detail(request, publication_id):
+    publication = get_object_or_404(Publication, pk=publication_id)
+    context = {
+        'first_name' : publication.first_name,
+        'last_name' : publication.last_name,
+        'agency_name' : publication.agency_name,
+        'cities' : publication.cities,
+        'categories' : publication.categories,
+        'status' : publication.status,
+        'number_1' : publication.number_1,
+        'number_2' : publication.number_2,
+        'description' : publication.description,
+        'image' : publication.image_one,
+    }
+    return render(request, 'pub/detail.html', context)

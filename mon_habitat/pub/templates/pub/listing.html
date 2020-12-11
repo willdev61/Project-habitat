@@ -26,7 +26,7 @@
                         <td>{{data.categories}}</td>
                         <td>{{data.status}}</td>
                         <td>{{data.number_1}}</td>
-                        <td><a href="#" class="btn btn-outline-success" role="button">Plus d'infos</a></td>
+                        <td><a href="{% url 'pub:detail' data.id %}" class="btn btn-outline-success" role="button">Plus d'infos</a></td>
                       </tr>
                     </tbody>
                     {% endfor %}
