@@ -17,26 +17,19 @@
                         <th scope="col">Action</th>
                       </tr>
                     </thead>
+                     {% for data in publications %}
                     <tbody>
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
+                        <td>{{data.id}}</td>
+                        <td>{{data.agency_name}}</td>
+                        <td>{{data.cities}}</td>
+                        <td>{{data.categories}}</td>
+                        <td>{{data.status}}</td>
+                        <td>{{data.number_1}}</td>
+                        <td><a href="#" class="btn btn-outline-success" role="button">Plus d'infos</a></td>
                       </tr>
                     </tbody>
+                    {% endfor %}
                   </table>
             </div>
         </div>

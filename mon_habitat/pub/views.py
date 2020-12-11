@@ -22,7 +22,7 @@ def public(request):
 
 
 def listing(request):
-    publications = Publication.objects.all().order_by('made_at')
+    publications = Publication.objects.all().order_by('-made_at')
     context = {
         'publications' : publications
     }
