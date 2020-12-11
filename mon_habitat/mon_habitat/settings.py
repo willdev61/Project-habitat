@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'crispy_forms',
     'background_image',
+    'django_filters',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
