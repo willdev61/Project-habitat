@@ -1,0 +1,46 @@
+{% extends 'pub/base.html' %} {% load static %} {% load background_image_tags %}
+{% block content %}
+<body style="background: url('{% static 'pub/images/fa6.jpg' %}') no-repeat fixed; background-size: cover;">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header text-center">Informations</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Publication faite par :</h3>
+                        <p> {{first_name}} {{last_name}} </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Nom de l'agence:</h3>
+                        <p> {{agency_name}} </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Situé à :</h3>
+                        <p> {{cities}} </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Catégorie :</h3>
+                        <p> {{categories}} </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Statut :</h3>
+                        <p> {{status}} </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Contacts :</h3>
+                        <p> {{number_1}}/{{number_2}} </p>
+                    </div>
+                    <div class="col-md-12">
+                        <h3>Description :</h3>
+                        <p> {{description}} </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Image :</h3>
+                        <img src="{{image.url}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
