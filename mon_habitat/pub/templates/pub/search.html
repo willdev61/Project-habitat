@@ -1,0 +1,46 @@
+{% extends 'pub/base.html' %} {% load static %} {% load background_image_tags %}
+{% block content %}
+<body style="background: url('{% static 'pub/images/slid1.jpg' %}') no-repeat fixed; background-size: cover;">
+    <div class="container">
+        <div class="card w-100">
+            <div class="card-body">
+                <form method="GET">
+                    {{ filter.form.as_table }}
+                    <button type="submit" class="btn btn-primary">Rechercher</button>
+                </form>
+            </div>
+        </div>
+        <div class="card w-100">
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Identifiant</th>
+                        <th scope="col">Nom de l'agence</th>
+                        <th scope="col">Commune</th>
+                        <th scope="col">Catégorie</th>
+                        <th scope="col">Statut</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    {% for data in filter.qs%}
+                    <tbody>
+                        <tr>
+                          <td>{{data.id}}</td>
+                          <td>{{data.agency_name}}</td>
+                          <td>{{data.cities}}</td>
+                          <td>{{data.categories}}</td>
+                          <td>{{data.status}}</td>
+                          <td>{{data.number_1}}</td>
+                          <td><a href="{% url 'pub:detail' data.id %}" class="btn btn-outline-success" role="button">Plus d'infos</a></td>
+                        </tr>
+                      </tbody>
+                    {% endfor %}
+                  </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
