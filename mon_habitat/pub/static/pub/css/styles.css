@@ -4,9 +4,34 @@ body {
   background-color: #FCFCFC;
   font-family: 'Oxygen', sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  text-transform : uppercase;
+}
+
 /** HEADER **/
 .navbar {
 	height: 100px;
 	text-transform: uppercase;
 	font-family: 'Lora'
+}
+
+#title {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.card {
+  margin-top: 100px;
+  margin-bottom : 100px;
+}
+
+.card-header {
+  height : 150px;
+  padding-top : 50px;
+  color : red;
+  font-size : 2em;
 }
